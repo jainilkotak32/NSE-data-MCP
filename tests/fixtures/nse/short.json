@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "SS_DATE": "17-SEP-2026",
+      "SS_DATE_ORDER": "2026-09-16T18:30:00.000Z",
+      "SS_SYMBOL": "360ONE",
+      "SS_NAME": "360 ONE WAM LIMITED",
+      "SS_QTY": 201
+    },
+    {
+      "SS_DATE": "17-SEP-2026",
+      "SS_DATE_ORDER": "2026-09-16T18:30:00.000Z",
+      "SS_SYMBOL": "ABCAPITAL",
+      "SS_NAME": "ADITYA BIRLA CAPITAL LIMITED",
+      "SS_QTY": 1
+    },
+    {
+      "SS_DATE": "17-SEP-2026",
+      "SS_DATE_ORDER": "2026-09-16T18:30:00.000Z",
+      "SS_SYMBOL": "RELIANCE",
+      "SS_NAME": "RELIANCE INDUSTRIES LTD",
+      "SS_QTY": 19229
+    }
+  ]
+}

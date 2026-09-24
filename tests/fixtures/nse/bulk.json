@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "BD_DT_DATE": "17-SEP-2026",
+      "BD_DT_ORDER": "2026-09-16T18:30:00.000Z",
+      "BD_SYMBOL": "ABH",
+      "BD_SCRIP_NAME": "ABH Healthcare Limited",
+      "BD_CLIENT_NAME": "MAHAMMADFARUK HAJIBHAI MIR",
+      "BD_BUY_SELL": "SELL",
+      "BD_QTY_TRD": 129600,
+      "BD_TP_WATP": 38.2,
+      "BD_REMARKS": "-"
+    },
+    {
+      "BD_DT_DATE": "17-SEP-2026",
+      "BD_DT_ORDER": "2026-09-16T18:30:00.000Z",
+      "BD_SYMBOL": "ABH",
+      "BD_SCRIP_NAME": "ABH Healthcare Limited",
+      "BD_CLIENT_NAME": "NEO APEX SHARE BROKING SERVICES LLP",
+      "BD_BUY_SELL": "BUY",
+      "BD_QTY_TRD": 74400,
+      "BD_TP_WATP": 38.2,
+      "BD_REMARKS": "-"
+    },
+    {
+      "BD_DT_DATE": "17-SEP-2026",
+      "BD_DT_ORDER": "2026-09-16T18:30:00.000Z",
+      "BD_SYMBOL": "ABH",
+      "BD_SCRIP_NAME": "ABH Healthcare Limited",
+      "BD_CLIENT_NAME": "NEO APEX SHARE BROKING SERVICES LLP",
+      "BD_BUY_SELL": "SELL",
+      "BD_QTY_TRD": 115200,
+      "BD_TP_WATP": 38.21,
+      "BD_REMARKS": "-"
+    }
+  ]
+}

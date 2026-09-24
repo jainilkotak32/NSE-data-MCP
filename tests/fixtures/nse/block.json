@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "BD_DT_DATE": "03-AUG-2026",
+      "BD_DT_ORDER": "2026-08-02T18:30:00.000Z",
+      "BD_SYMBOL": "ADANIGREEN",
+      "BD_SCRIP_NAME": "Adani Green Energy Ltd",
+      "BD_CLIENT_NAME": "ADANI INFRA (INDIA) LIMITED",
+      "BD_BUY_SELL": "BUY",
+      "BD_QTY_TRD": 17000000,
+      "BD_TP_WATP": 1400,
+      "BD_REMARKS": null
+    },
+    {
+      "BD_DT_DATE": "03-AUG-2026",
+      "BD_DT_ORDER": "2026-08-02T18:30:00.000Z",
+      "BD_SYMBOL": "ADANIGREEN",
+      "BD_SCRIP_NAME": "Adani Green Energy Ltd",
+      "BD_CLIENT_NAME": "ARDOUR INVESTMENT HOLDING LTD",
+      "BD_BUY_SELL": "SELL",
+      "BD_QTY_TRD": 17000000,
+      "BD_TP_WATP": 1400,
+      "BD_REMARKS": null
+    },
+    {
+      "BD_DT_DATE": "04-AUG-2026",
+      "BD_DT_ORDER": "2026-08-03T18:30:00.000Z",
+      "BD_SYMBOL": "ADANIPOWER",
+      "BD_SCRIP_NAME": "Adani Power Limited",
+      "BD_CLIENT_NAME": "ADANI INFRA (INDIA) LIMITED",
+      "BD_BUY_SELL": "BUY",
+      "BD_QTY_TRD": 124800000,
+      "BD_TP_WATP": 210.5,
+      "BD_REMARKS": null
+    }
+  ]
+}
