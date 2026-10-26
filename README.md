@@ -1,5 +1,15 @@
 # NSE Data MCP server
 
+<p align="left">
+  <a href="pyproject.toml"><img src="https://img.shields.io/badge/python-3.12%2B-3776AB?logo=python&logoColor=white" alt="Python 3.12+"></a>
+  <a href="https://www.nseindia.com"><img src="https://img.shields.io/badge/data-NSE%20India-0B5FA5" alt="Data: NSE India"></a>
+  <a href="#run"><img src="https://img.shields.io/badge/transport-stdio%20%7C%20Streamable%20HTTP-6E56CF" alt="Transport: stdio and Streamable HTTP"></a>
+</p>
+
+<img src="assets/nse-data-mcp.gif" alt="NSE Data MCP server demo" width="100%">
+
+<br>
+
 An MCP server for NSE equity research. It provides equity-segment securities,
 Nifty 50 constituents and latest prices, stock and index history, financial
 results, shareholding patterns, corporate actions, announcements and
