@@ -247,6 +247,82 @@ file. Downloads are capped at 25 MiB; PDF text extraction at 500 pages. The serv
 returns content without writing files. Only HTTPS NSE and archive hosts are
 accepted, including after redirects.
 
+## BSE Data MCP server
+
+The same package ships a second server, `bse-data-mcp`, with the equivalent
+tools for BSE wherever BSE's public website exposes the data. It is a separate
+MCP server, so both can be connected at once.
+
+```bash
+uv run bse-data-mcp                               # stdio
+uv run bse-data-mcp --transport streamable-http   # http://localhost:8000/mcp
+uv run mcp dev bse_mcp_server.py                  # MCP Inspector
+```
+
+```json
+{
+  "mcpServers": {
+    "bse-data": {
+      "command": "uv",
+      "args": ["--directory", "/absolute/path/to/NSE-data-MCP", "run", "bse-data-mcp"]
+    }
+  }
+}
+```
+
+BSE identifies companies by numeric **scrip code** (for example `500325`), not
+by symbol. Use `get_equity_securities` to find a scrip code from a company name
+or symbol. Dates use `DD-MM-YYYY`, and pagination and JSON/CSV export work as
+they do for the NSE tools.
+
+| NSE tool | BSE tool | Notes |
+| --- | --- | --- |
+| `get_nifty50_stocks` | `get_sensex_stocks` | Sensex company name to scrip code |
+| `get_nifty50_stocks_ltp` | `get_sensex_stocks_ltp` | Latest Sensex constituent snapshot |
+| `get_equity_segment_securities` | `get_equity_securities` | Scrip code, symbol, ISIN, group, industry; filter by `group` and `status` |
+| `get_stock_historical_price_volume_data` | `get_stock_historical_price_volume_data` | Daily OHLC, WAP, volume, trades, turnover and delivery by scrip code |
+| `get_nse_index_symbol_names` | `get_bse_index_names` | Index names as BSE lists them |
+| `get_nse_index_historical_ohlc_volume_data` | `get_bse_index_historical_data` | Daily, monthly or yearly values with BSE's columns |
+| `get_financial_results` | `get_financial_results` | Result filings (BSE's `Result` announcement category) with document links |
+| — | `get_financial_results_snapshot` | Revenue, profit, EPS and margins for the latest periods shown on BSE's company page |
+| — | `get_result_calendar` | Scheduled result board meetings; scrip code optional |
+| `get_corporate_actions` | `get_corporate_actions` | Scrip code optional; filter by ex-date, record date or book-closure start |
+| `get_corporate_announcements` | `get_corporate_announcements` | At most one calendar year; optional `category`, `subject` and transcript filter |
+| `get_earnings_call_transcripts` | `get_earnings_call_transcripts` | Matched on announcement text |
+| `get_corporate_document` | `get_corporate_document` | HTTPS BSE hosts only; same limits |
+| `get_filing_facts` | `get_filing_facts` | Any BSE-hosted XBRL instance URL |
+| `get_shareholding_patterns` | not available | |
+| `get_bulk_block_deals` | not available | |
+| `get_short_selling_data` | not available | |
+
+The helper tools `validate_start_end_date_str`, `split_date_range` and
+`get_useragent` are also provided.
+
+Shareholding patterns, bulk/block deals and short-selling data are not
+included: no BSE endpoint for them could be confirmed. BSE result filings are
+listed as announcements with their attachments; the listing does not link each
+filing's XBRL file, so `get_filing_facts` needs an XBRL URL obtained elsewhere.
+
+**Verification status.** The BSE server was written without network access to
+`bseindia.com`. Its offline tests use hand-built payloads (see
+`tests/fixtures/bse/README.md`), so they check the server's own logic, not that
+BSE's endpoints behave as assumed. Request and response shapes for
+announcements, corporate actions, the securities list, result calendar and
+results snapshot follow the open-source
+[`bse`](https://github.com/BennyThadikaran/BseIndiaApi) client and its sample
+responses. The stock-history download (`StockPriceCSVDownload`), the Sensex
+snapshot (`GetMktData`), index-history columns, index-name fields and
+announcement attachment folders are unconfirmed. Run the live tests before
+relying on it:
+
+```bash
+BSE_LIVE_TESTS=1 uv run pytest tests/test_live_bse.py -v
+```
+
+As with NSE, HTTP failures and unexpected payloads raise errors instead of
+returning a misleading empty dataset. Data is retrieved from BSE's public
+website, not an official API, and is subject to BSE's terms of use.
+
 ## Test
 
 ```bash

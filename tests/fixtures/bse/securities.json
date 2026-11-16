@@ -1,0 +1,4 @@
+[
+  {"SCRIP_CD": "500002", "Scrip_Name": "ABB India Limited", "Status": "Active", "GROUP": "A", "FACE_VALUE": "2.00", "ISIN_NUMBER": "INE117A01022", "INDUSTRY": "Heavy Electrical Equipment", "scrip_id": "ABB", "Segment": "Equity", "NSURL": "https://www.bseindia.com/stock-share-price/abb-india-limited/abb/500002/", "Issuer_Name": "ABB India Limited", "Mktcap": "83256.68"},
+  {"SCRIP_CD": "500209", "Scrip_Name": "Infosys Ltd", "Status": "Active", "GROUP": "A", "FACE_VALUE": "5.00", "ISIN_NUMBER": "INE009A01021", "INDUSTRY": "Computers - Software & Consulting", "scrip_id": "INFY", "Segment": "Equity", "NSURL": "https://www.bseindia.com/stock-share-price/infosys-ltd/infy/500209/", "Issuer_Name": "Infosys Limited", "Mktcap": "600000.00"}
+]

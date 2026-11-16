@@ -1,0 +1,4 @@
+{"Table": [
+  {"scrip_cd": 500209, "scripname": "INFY", "LONG_NAME": "INFOSYS LTD.", "scrip_grp": "A", "openrate": 1439.65, "highrate": 1560.0, "lowrate": 1425.9, "ltradert": 1523.05, "prevdayclose": 1389.55, "change_val": 133.5, "change_percent": 9.61, "index_code": 16, "trd_val": 1531.0, "trd_vol": 101527, "nooftrd": 5827, "trend": "", "dt_tm": "2023-10-23T13:02:34", "URL": "https://www.bseindia.com/stock-share-price/infosys-ltd/infy/500209/"},
+  {"scrip_cd": 500325, "scripname": "RELIANCE", "LONG_NAME": "RELIANCE INDUSTRIES LTD.", "scrip_grp": "A", "openrate": 2300.0, "highrate": 2310.5, "lowrate": 2290.0, "ltradert": 2301.25, "prevdayclose": 2299.0, "change_val": 2.25, "change_percent": 0.1, "index_code": 16, "trd_val": null, "trd_vol": 250000, "nooftrd": 9000, "trend": "", "dt_tm": "2023-10-23T13:02:34", "URL": "https://www.bseindia.com/stock-share-price/reliance-industries-ltd/reliance/500325/"}
+]}
